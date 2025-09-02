@@ -1,0 +1,42 @@
+{
+  "info": {
+    "name": "FocusFlow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {"name": "Register","request": {"method": "POST","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/auth/register","host": ["{{baseUrl}}"],"path": ["auth","register"]},"body": {"mode": "raw","raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"pass1234\"\n}"}}},
+        {"name": "Login","request": {"method": "POST","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/auth/login","host": ["{{baseUrl}}"],"path": ["auth","login"]},"body": {"mode": "raw","raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"pass1234\"\n}"}}},
+        {"name": "Me","request": {"method": "GET","url": {"raw": "{{baseUrl}}/auth/me","host": ["{{baseUrl}}"],"path": ["auth","me"]}}},
+        {"name": "Logout","request": {"method": "POST","url": {"raw": "{{baseUrl}}/auth/logout","host": ["{{baseUrl}}"],"path": ["auth","logout"]}}}
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {"name": "List Today","request": {"method": "GET","url": {"raw": "{{baseUrl}}/tasks?date={{today}}","host": ["{{baseUrl}}"],"path": ["tasks"],"query": [{"key": "date","value": "{{today}}"}]}}},
+        {"name": "Create","request": {"method": "POST","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/tasks","host": ["{{baseUrl}}"],"path": ["tasks"]},"body": {"mode": "raw","raw": "{\n  \"title\": \"Sample task\"\n}"}}},
+        {"name": "Update","request": {"method": "PATCH","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/tasks/:id","host": ["{{baseUrl}}"],"path": ["tasks",":id"]},"body": {"mode": "raw","raw": "{\n  \"lane\": \"NOW\"\n}"}}},
+        {"name": "Done","request": {"method": "POST","url": {"raw": "{{baseUrl}}/tasks/:id/done","host": ["{{baseUrl}}"],"path": ["tasks",":id","done"]}}}
+      ]
+    },
+    {
+      "name": "Sessions",
+      "item": [
+        {"name": "Start","request": {"method": "POST","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/sessions","host": ["{{baseUrl}}"],"path": ["sessions"]},"body": {"mode": "raw","raw": "{\n  \"plannedMinutes\": 25\n}"}}},
+        {"name": "Stop","request": {"method": "PATCH","url": {"raw": "{{baseUrl}}/sessions/:id/stop","host": ["{{baseUrl}}"],"path": ["sessions",":id","stop"]}}},
+        {"name": "List","request": {"method": "GET","url": {"raw": "{{baseUrl}}/sessions","host": ["{{baseUrl}}"],"path": ["sessions"]}}}
+      ]
+    },
+    {
+      "name": "Routines",
+      "item": [
+        {"name": "List","request": {"method": "GET","url": {"raw": "{{baseUrl}}/routines","host": ["{{baseUrl}}"],"path": ["routines"]}}},
+        {"name": "Create","request": {"method": "POST","header": [{"key": "Content-Type","value": "application/json"}],"url": {"raw": "{{baseUrl}}/routines","host": ["{{baseUrl}}"],"path": ["routines"]},"body": {"mode": "raw","raw": "{\n  \"title\": \"Daily planning\",\n  \"rrule\": \"DAILY\"\n}"}}},
+        {"name": "Materialize Today","request": {"method": "POST","url": {"raw": "{{baseUrl}}/routines/materialize-today","host": ["{{baseUrl}}"],"path": ["routines","materialize-today"]}}}
+      ]
+    }
+  ]
+}

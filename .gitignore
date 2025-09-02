@@ -1,0 +1,20 @@
+# dependencies
+frontend/node_modules/
+backend/node_modules/
+
+# builds
+frontend/build/
+backend/dist/
+
+# env and logs
+.env
+.env.*
+*.log
+logs/
+coverage/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
