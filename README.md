@@ -57,6 +57,7 @@ MONGODB_URI=mongodb://localhost:27017/focusflow
 SESSION_SECRET=devsecret
 CLIENT_ORIGIN=http://localhost:3000
 PORT=4000
+```
 
 ## API Docs
 - Swagger: http://localhost:4000/docs
