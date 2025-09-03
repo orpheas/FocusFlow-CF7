@@ -28,6 +28,28 @@ npm install
 npm start
 ```
 Κάνει initialize το Frontend στο http://localhost:3000
+```
+
+## MongoDB με Docker
+
+Για persistent memory, MongoDB instance μέσω Docker.
+
+1) Install Docker Desktop
+
+2) Launch MongoDB (μέσω docker compose)
+```
+docker compose up -d mongo
+```
+MongoDB container στο `localhost:27017` και θα αποθηκεύει τα δεδομένα στο `mongo-data`.
+
+4) Εκκίνηση backend
+```
+cd backend
+npm install
+npm run build
+npm start
+```
+Με αυτόν τον τρόπο ο server θα συνδεθεί στην MongoDB.
 
 ## Environment
 Backend `.env`:
@@ -36,7 +58,6 @@ MONGODB_URI=mongodb://localhost:27017/focusflow
 SESSION_SECRET=devsecret
 CLIENT_ORIGIN=http://localhost:3000
 PORT=4000
-```
 
 ## API Docs
 - Swagger: http://localhost:4000/docs
