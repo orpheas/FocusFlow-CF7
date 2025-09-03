@@ -19,7 +19,7 @@ npm install
 npm run build
 node dist/server.js
 ```
-Κάνει initialize το API στο http://localhost:4000 με in-memory Mongo.
+Κάνει initialize το Backend στο http://localhost:4000 με in-memory Mongo.
 
 2) Frontend
 ```
@@ -27,7 +27,7 @@ cd frontend
 npm install
 npm start
 ```
-Κάνει initialize το API στο http://localhost:3000
+Κάνει initialize το Frontend στο http://localhost:3000
 
 ## Environment
 Backend `.env`:

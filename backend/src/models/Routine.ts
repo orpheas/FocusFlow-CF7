@@ -27,3 +27,4 @@ RoutineSchema.index({ userId: 1 });
 export const RoutineModel = mongoose.model<RoutineDocument>('Routine', RoutineSchema);
 
 
+

@@ -8,3 +8,4 @@ activityRouter.use(requireAuth);
 activityRouter.get('/', (req, res, next) => activityController.list(req, res).catch(next));
 
 
+
