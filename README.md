@@ -28,7 +28,6 @@ npm install
 npm start
 ```
 Κάνει initialize το Frontend στο http://localhost:3000
-```
 
 ## MongoDB με Docker
 
