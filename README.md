@@ -6,6 +6,10 @@ Frontend: React
 
 Testing: Jest + Supertest
 
+## Demo
+
+![Demo](assets/flowfocusdemo.gif)
+
 ## Απαιτήσεις
 - Node 18+
 - npm

@@ -99,3 +99,52 @@ a { color: inherit; text-decoration: none; }
 .list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
 
 .auth-card { max-width: 420px; margin: 64px auto; padding: 24px; }
+/* Center the auth page and modernize the card */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(99,102,241,0.25), transparent 60%),
+              radial-gradient(1000px 500px at 120% 10%, rgba(34,211,238,0.18), transparent 55%),
+              linear-gradient(180deg, var(--bg), var(--panel-2));
+}
+
+.auth-card.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.auth-card h1 {
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.auth-card .muted {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.auth-card form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.auth-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-actions {
+  margin-top: 8px;
+}

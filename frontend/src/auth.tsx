@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import { api } from './api';
 
 export type PublicUser = {
@@ -79,15 +80,7 @@ export function Protected({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   if (loading) return <div style={{ padding: 24 }}>Loading…</div>;
   if (!user) {
-    return (
-      <div style={{ padding: 24 }}>
-        <p>Please log in.</p>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <a href="/login">Go to Login</a>
-          <a href="/login?mode=register">Create an account</a>
-        </div>
-      </div>
-    );
+    return <Navigate to="/login" replace />;
   }
   return <>{children}</>;
 }
