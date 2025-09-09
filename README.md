@@ -66,9 +66,6 @@ PORT=4000
 ## API Docs
 - Swagger: http://localhost:4000/docs
 
-## Αρχεία Postman
-Κάντε import `postman/FocusFlow.postman_collection.json` and `postman/FocusFlow.postman_environment.json`.
-
 ## Tests
 ```
 cd backend

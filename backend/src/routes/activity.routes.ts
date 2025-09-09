@@ -11,3 +11,4 @@ activityRouter.get('/', (req, res, next) => activityController.list(req, res).ca
 
 
 
+
